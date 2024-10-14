@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----------------------- Favicons Image ----------------->
+    <link rel="shortcut icon" href="images/icons8-crud-32 .png" type="image/x-icon">
+    <!----------------------- Google Fonts  ----------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!----------------------- Font Awesome File  ----------------->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!----------------------- Bootstrap CSS File  ----------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!----------------------- Main CSS File  ----------------->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Crud System</title>
+</head>
+
+<body>
+
+    <!---------------------- Start Of Main Sections ---------------->
+    <main class="d-flex align-items-center justify-content-center">
+        <div class="inner m-auto p-3">
+            <div class="container">
+                <h1 class="text-center">Crud System</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" id="productName" class="form-control" placeholder="Product Name" required>
+                    </div>
+                </div>
+                <div class="row g-3 mt-1">
+                    <div class="col-md-3">
+                        <input type="number" id="price" class="form-control" placeholder="Price">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="taxes" class="form-control" placeholder="Taxes">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="ads" class="form-control" placeholder="Ads">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="discount" class="form-control" placeholder="Discount">
+                    </div>
+                </div>
+                <div class="row g-3 mt-1">
+                    <div class="col-md-12">
+                        <input type="text" id="productCategory" class="form-control" placeholder="Product Category">
+                    </div>
+                </div>
+                <div class="g-3 mt-3">
+                    <button id="createProduct" class="btn btn-success w-100">Create Product</button>
+                    <button id="updateProduct" class="btn btn-info w-100 d-none">Update</button>
+                </div>
+                <div class="row g-3 mt-1">
+                    <div class="col-md-12">
+                        <input type="search" id="searchInput" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+                <div class="row mt-3 g-2">
+                    <div class="col-md-6">
+                        <button id="searchByName" class="btn btn-warning w-100">Search By Name</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button id="searchByCategory" class="btn btn-warning w-100">Search By Category</button>
+                    </div>
+                </div>
+                <div class="delete all mt-3">
+                    <button id="deleteAll" class="btn btn-danger w-100">Delete All</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!---------------------- End Of Main Section ---------------->
+
+    <!---------------------- Start Of Show Products Section ---------------->
+    <section class="mt-3">
+        <div class="inner m-auto p-3 text-center">
+            <div class="container">
+                <table class="table table-striped-columns rounded-2 overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Taxes</th>
+                            <th>Ads</th>
+                            <th>Discount</th>
+                            <th>Total</th>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productList">
+                        <!-- <tr> -->
+                        <!-- <td>ID</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Taxes</td>
+                        <td>Ads</td>
+                        <td>Discount</td>
+                        <td>Total</td>
+                        <td>Category</td>
+                        <td><button class="update btn btn-info">Update</button></td>
+                        <td><button class="delete btn btn-danger">Delete</button></td> -->
+                        <!-- </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------- End Of Show Products Section ---------------->
+
+
+    <!---------------------- Start Of Modal Bootstrap ---------------->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-danger-emphasis">
+                    Please You Should Be Fill up The Inputs
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------- End Of Modal Bootstrap ---------------->
+
+
+    <!---------------------- Bootstrap JS File  ----------------->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!---------------------- Script JS File  ----------------->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

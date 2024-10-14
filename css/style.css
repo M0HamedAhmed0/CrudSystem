@@ -1,0 +1,49 @@
+body {
+    background-image: url(../images/BackGround-table.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    font-family: "Monoton", sans-serif;
+    font-weight: 500;
+    line-height: 2;
+    color: rgba(74, 25, 6, 0.843);
+}
+
+.inner {
+    width: 85%;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: auto;
+}
+
+.btn:first-child:active {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+}
+
+.form-control {
+    transition: 0.5s;
+}
+
+.form-control:focus {
+    transform: scale(1.1);
+    width: 95%;
+    margin: auto;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+td .update.btn:first-child:active {
+    color: #3dd5f3;
+    border-color: #3dd5f3;
+}
+
+td .delete.btn:first-child:active {
+    color: #b02a37;
+    border-color: #b02a37;
+}
